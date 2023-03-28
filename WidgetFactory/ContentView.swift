@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isActive: Bool = false
+    @State var todos: [TodoItem] = []
+    @State var selectedTodo: TodoItem?
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            if !self.isActive {
+                SplashView()
+            }
+            else {
+                TodoView()
+            }
         }
         .padding()
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                withAnimation {
+                    self.isActive = true
+                }
+            }
+        }
     }
 }
 
