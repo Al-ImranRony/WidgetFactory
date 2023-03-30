@@ -27,24 +27,29 @@ struct LargeSizeView: View {
             .clipped()
             .shadow(radius: 5)
             
-            ForEach(0..<10, id: \.self) { _ in
-                HStack {
-                    Circle()
-                        .stroke(lineWidth: 2)
-                        .frame(width: 30, height: 30)
-                        .overlay {
-                            if true {
-                                Image(systemName: "checkmark")
+            ForEach(0..<5, id: \.self) { _ in
+                Link(destination: URL(string: "widgetfactory://todo/1")!) {
+                    HStack {
+                        Circle()
+                            .stroke(lineWidth: 2)
+                            .frame(width: 30, height: 30)
+                            .overlay {
+                                if true {
+                                    Image(systemName: "checkmark")
+                                }
                             }
-                        }
-                    Text("Todo Title")
-                    
-                    Spacer()
+                        
+                        Text("Todo Title")
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
                 
                 Divider() 
             }
+            
+            Spacer()
         }
     }
 }

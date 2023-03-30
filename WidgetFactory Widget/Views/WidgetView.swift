@@ -20,7 +20,7 @@ struct WidgetView : View {
         case .systemMedium:
             MediumSizeView(entry: entry)
         default:
-            Text(entry.date, style: .time)//"Not implemented !")
+            Text(entry.date, style: .time)
         }
     }
 }

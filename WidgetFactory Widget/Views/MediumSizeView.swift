@@ -35,6 +35,7 @@ struct MediumSizeView: View {
         } label: {
             Label("My todos", systemImage: "list.dash")
         }
+        .widgetURL(URL(string: "widgetfactory://todo/1"))
     }
 }
 

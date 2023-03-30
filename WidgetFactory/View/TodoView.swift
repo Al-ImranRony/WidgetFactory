@@ -5,6 +5,7 @@
 //  Created by Bitmorpher 4 on 3/26/23.
 //
 
+import Foundation
 import SwiftUI
 
 struct TodoView: View {
@@ -31,19 +32,38 @@ struct TodoView: View {
                 }
             }
         }
-        .sheet(item: $selectedTodo) { todo in
+        .sheet(item: $selectedTodo) { selectedTodoItem in
             GroupBox {
                 VStack(alignment: .leading) {
-                    Text(todo.todo)
+                    Text(selectedTodoItem.todo)
                         .font(.headline)
                     
-                    Text(todo.completed ? "Completed" : "Open")
+                    Text("Status: **\(selectedTodoItem.completed ? "Completed" : "Open")**")
                         .font(.subheadline)
                 }
             } label: {
-                Label("Todo: \(todo.id)", systemImage: "person")
+                Label("Todo: \(selectedTodoItem.id)", systemImage: "person")
             }
             .padding()
+        }
+        .onOpenURL { url in
+            guard
+                url.scheme == "widgetfactory",
+                url.host == "todo",
+                let id = Int(url.pathComponents[1])
+            else {
+                return
+            }
+            Task {
+                do {
+                    let todo = try await TodoService.shared.getTodo(with: id)
+                    DispatchQueue.main.async {
+                        selectedTodo = todo
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
         }
     }
 }
