@@ -22,11 +22,15 @@ struct MediumSizeView: View {
                 
                 Divider()
                 
-                VStack(alignment: .leading) {
-                    Text("Todo Title")
-                        .font(.headline)
-                    Text("Completed")
-                        .font(.subheadline)
+                if let todo = entry.todos.first {
+                    VStack(alignment: .leading) {
+                        Text("Title: \(todo.todo)")
+                            .font(.headline)
+                        Text("Status: \(todo.completed ? "Completed" : "Open")")
+                            .font(.subheadline)
+                    }
+                } else {
+                    Text("Couldn't find any todo, try again!")
                 }
             
                 Spacer()
@@ -35,6 +39,7 @@ struct MediumSizeView: View {
         } label: {
             Label("My todos", systemImage: "list.dash")
         }
+        .widgetURL(URL(string: "widge tfactory://todo/\(entry.todos.first?.id ?? 0)"))
     }
 }
 

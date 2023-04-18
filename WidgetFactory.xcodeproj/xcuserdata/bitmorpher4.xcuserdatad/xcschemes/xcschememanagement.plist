@@ -7,7 +7,7 @@
 		<key>WidgetFactory WidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>WidgetFactory.xcscheme_^#shared#^_</key>
 		<dict>
@@ -18,6 +18,19 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2D43F6B729D05BBC00FBF86D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DBF29AF29CC592400B24EA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

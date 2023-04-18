@@ -17,10 +17,27 @@ struct WidgetView : View {
         switch widgetFamily {
         case .systemLarge:
             LargeSizeView(entry: entry)
+            
         case .systemMedium:
             MediumSizeView(entry: entry)
+            
+        case .accessoryInline:
+            Text(entry.todos.first?.todo ?? "No Todos Today")
+            
+        case .accessoryCircular:
+            Gauge(value: 0.7) {
+                Text(entry.date, format: .dateTime.month())
+            }
+            .gaugeStyle(.accessoryCircular)
+            
+        case .accessoryRectangular:
+            Gauge(value: 0.7) {
+                Text(entry.date, format: .dateTime.dayOfYear())
+            }
+            .gaugeStyle(.accessoryLinear)
+            
         default:
-            Text(entry.date, style: .time)//"Not implemented !")
+            Text(entry.date, style: .time)
         }
     }
 }
