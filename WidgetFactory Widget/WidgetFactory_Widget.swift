@@ -16,7 +16,7 @@ struct WidgetFactory_Widget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgetView(entry: entry)
         }
-        .supportedFamilies([.systemMedium, .systemLarge])
+        .supportedFamilies([.systemMedium, .systemLarge, .accessoryInline, .accessoryCircular, .accessoryRectangular])
         .configurationDisplayName("My Todo Tasks")
         .description("Explore your latest todo(s).")
     }
@@ -24,7 +24,7 @@ struct WidgetFactory_Widget: Widget {
 
 struct WidgetFactory_Widget_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetView(entry: SimpleEntry(date: Date()))
+        WidgetView(entry: SimpleEntry(date: Date(), todos: [.placeholder(id: 0), .placeholder(id: 1)]))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

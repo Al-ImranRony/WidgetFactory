@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 struct TodoView: View {
     @State var todos: [TodoItem] = []
     @State var selectedTodo: TodoItem?
@@ -22,7 +23,7 @@ struct TodoView: View {
                 }
                 .buttonStyle(.plain)
             }
-            .navigationTitle("Todo List")
+            .navigationTitle("Todo Entities")
             .task {
                 do {
                     todos = try await TodoService.shared.getAllTodos()

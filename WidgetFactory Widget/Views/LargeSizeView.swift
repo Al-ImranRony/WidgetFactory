@@ -27,19 +27,19 @@ struct LargeSizeView: View {
             .clipped()
             .shadow(radius: 5)
             
-            ForEach(0..<5, id: \.self) { _ in
-                Link(destination: URL(string: "widgetfactory://todo/1")!) {
+            ForEach(entry.todos) { todo in
+                Link(destination: URL(string: "widgetfactory://todo/\(todo.id)")!) {
                     HStack {
                         Circle()
-                            .stroke(lineWidth: 2)
+                            .stroke(lineWidth: 1.5)
                             .frame(width: 30, height: 30)
                             .overlay {
-                                if true {
+                                if todo.completed {
                                     Image(systemName: "checkmark")
                                 }
                             }
                         
-                        Text("Todo Title")
+                        Text(todo.todo)
                         
                         Spacer()
                     }

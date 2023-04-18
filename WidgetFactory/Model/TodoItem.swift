@@ -14,3 +14,9 @@ struct TodoItem: Codable, Identifiable {
     var completed: Bool
     var userId: Int
 }
+
+extension TodoItem {
+    static func placeholder(id: Int) -> TodoItem {
+        TodoItem(id: id, todo: "Placeholder", completed: .random(), userId: 0)
+    }
+}
