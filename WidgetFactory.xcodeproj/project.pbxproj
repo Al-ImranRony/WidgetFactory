@@ -116,6 +116,7 @@
 		2D43F6AF29D0563B00FBF86D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2DBF29B529CC592500B24EA6 /* ContentView.swift */,
 				2DBF29C329CC7AEA00B24EA6 /* SplashView.swift */,
 				2D43F6B229D0568300FBF86D /* TodoView.swift */,
 			);
@@ -181,7 +182,6 @@
 				2D43F6AF29D0563B00FBF86D /* View */,
 				2D43F6A629D021CB00FBF86D /* Model */,
 				2DBF29B329CC592500B24EA6 /* WidgetFactoryApp.swift */,
-				2DBF29B529CC592500B24EA6 /* ContentView.swift */,
 				2DBF29B729CC592600B24EA6 /* Assets.xcassets */,
 				2DBF29B929CC592600B24EA6 /* Preview Content */,
 			);
