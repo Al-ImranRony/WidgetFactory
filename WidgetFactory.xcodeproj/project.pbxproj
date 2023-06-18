@@ -23,6 +23,10 @@
 		2D43F6F129D174D600FBF86D /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43F6F029D174D600FBF86D /* SimpleEntry.swift */; };
 		2D43F6F329D1768900FBF86D /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43F6F229D1768900FBF86D /* Provider.swift */; };
 		2D43F6F529D185D400FBF86D /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43F6F429D185D400FBF86D /* TodoList.swift */; };
+		2D692AFB2A3F173F00BF0D82 /* ToDoHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692AFA2A3F173F00BF0D82 /* ToDoHomeView.swift */; };
+		2D692AFC2A3F173F00BF0D82 /* ToDoHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692AFA2A3F173F00BF0D82 /* ToDoHomeView.swift */; };
+		2D692AFE2A3F3FA100BF0D82 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692AFD2A3F3FA100BF0D82 /* MenuList.swift */; };
+		2D692AFF2A3F3FA100BF0D82 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692AFD2A3F3FA100BF0D82 /* MenuList.swift */; };
 		2DBF29B429CC592500B24EA6 /* WidgetFactoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF29B329CC592500B24EA6 /* WidgetFactoryApp.swift */; };
 		2DBF29B629CC592500B24EA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF29B529CC592500B24EA6 /* ContentView.swift */; };
 		2DBF29B829CC592600B24EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF29B729CC592600B24EA6 /* Assets.xcassets */; };
@@ -75,6 +79,8 @@
 		2D43F6F029D174D600FBF86D /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
 		2D43F6F229D1768900FBF86D /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		2D43F6F429D185D400FBF86D /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		2D692AFA2A3F173F00BF0D82 /* ToDoHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoHomeView.swift; sourceTree = "<group>"; };
+		2D692AFD2A3F3FA100BF0D82 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		2DBF29B029CC592500B24EA6 /* WidgetFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBF29B329CC592500B24EA6 /* WidgetFactoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetFactoryApp.swift; sourceTree = "<group>"; };
 		2DBF29B529CC592500B24EA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 				2D43F6F429D185D400FBF86D /* TodoList.swift */,
 				2D43F6AB29D0223900FBF86D /* TodoItem.swift */,
 				2D43F6AD29D022B600FBF86D /* TodoService.swift */,
+				2D692AFD2A3F3FA100BF0D82 /* MenuList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 				2DBF29B529CC592500B24EA6 /* ContentView.swift */,
 				2DBF29C329CC7AEA00B24EA6 /* SplashView.swift */,
 				2D43F6B229D0568300FBF86D /* TodoView.swift */,
+				2D692AFA2A3F173F00BF0D82 /* ToDoHomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,9 +308,11 @@
 				2D43F6F129D174D600FBF86D /* SimpleEntry.swift in Sources */,
 				2DBF8F5A29E1789B006A104E /* TodoList.swift in Sources */,
 				2DBF8F5829E1784B006A104E /* TodoItem.swift in Sources */,
+				2D692AFC2A3F173F00BF0D82 /* ToDoHomeView.swift in Sources */,
 				2D43F6D529D0B54C00FBF86D /* WidgetView.swift in Sources */,
 				2DBF8F5929E17880006A104E /* TodoService.swift in Sources */,
 				2D43F6D829D0B84100FBF86D /* LargeSizeView.swift in Sources */,
+				2D692AFF2A3F3FA100BF0D82 /* MenuList.swift in Sources */,
 				2D43F6C429D05BBD00FBF86D /* WidgetFactory_Widget.swift in Sources */,
 				2D43F6F329D1768900FBF86D /* Provider.swift in Sources */,
 				2D43F6C029D05BBD00FBF86D /* WidgetFactory_WidgetBundle.swift in Sources */,
@@ -322,6 +332,8 @@
 				2DBF29B429CC592500B24EA6 /* WidgetFactoryApp.swift in Sources */,
 				2D43F6AE29D022B600FBF86D /* TodoService.swift in Sources */,
 				2DBF29C429CC7AEA00B24EA6 /* SplashView.swift in Sources */,
+				2D692AFE2A3F3FA100BF0D82 /* MenuList.swift in Sources */,
+				2D692AFB2A3F173F00BF0D82 /* ToDoHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
