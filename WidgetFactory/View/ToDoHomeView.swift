@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 
 struct ToDoHomeView: View {
@@ -13,32 +14,48 @@ struct ToDoHomeView: View {
     @State var createdMenus: [Menu] = Menu.createdMenus()
     
     var body: some View {
-        NavigationView {
-            List {
-                Section {
-                    ForEach(menus) { item in
-                        MenuItem(menu: item)
+        VStack {
+            NavigationView {
+                List {
+                    Section {
+                        ForEach(menus) { item in
+                            MenuItemCell(menu: item)
+                        }
+                        .listRowSeparator(.hidden)
+                        
+                        Divider()
+                            .frame(width: UIScreen.main.bounds.width)
+                            .padding(.top, 10)
+                        
+                        ForEach(createdMenus) { menu in
+                            MenuItemCell(menu: menu)
+                        }
+                        .listRowSeparator(.hidden)
+                        .padding(.bottom, 420)
                     }
-                    .listRowSeparator(.hidden)
                 }
-                Divider()
-                Section {
-                    ForEach(createdMenus) { menu in
-                        MenuItem(menu: menu)
-                    }
-                    .listRowSeparator(.hidden)
-                }
+                .overlay(
+                    BarContent()
+                        .padding(.trailing, 30)
+                        .offset(x: 0, y: -60)
+                    , alignment: .topTrailing)
+                .navigationTitle(Text("D A I L Y  D O"))
+                .listStyle(.grouped)
+                .offset(x: 0, y: 20)
+                .listRowInsets(EdgeInsets())
             }
-            .overlay(
-                BarContent()
-                .padding(.trailing, 30)
-                .offset(x: 0, y: -60)
-            , alignment: .topTrailing)
-            
-            .navigationTitle("D A I L Y  D O")
-            .listStyle(.grouped)
-            .offset(x: 0, y: 20)
+            Spacer()
+            MenuItemCell(menu: Menu(title: "", icon: "plus", iconColor: "#3498DB", numberOfItems: 0))
+                .listRowSeparator(.hidden)
+                .padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 0))
+            Divider()
+                .frame(width: UIScreen.main.bounds.width)
+                .padding(.top, -10)
         }
+    }
+    
+    init() {
+        UITableView.appearance().showsVerticalScrollIndicator = false
     }
 }
 
@@ -54,19 +71,6 @@ struct BarContent: View {
             .scaledToFit()
             .frame(width: 30, height: 30)
             .tint(.mint)
-    }
-}
-
-struct MenuItem: View {
-    let menu: Menu
-    
-    var body: some View {
-        HStack {
-            Image(systemName: menu.icon)
-            Text(menu.title)
-            Spacer()
-            Text(menu.numberOfItems > 0 ? "\(menu.numberOfItems)" : "")
-        }
     }
 }
 

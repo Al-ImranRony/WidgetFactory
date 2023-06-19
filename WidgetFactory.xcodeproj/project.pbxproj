@@ -27,6 +27,14 @@
 		2D692AFC2A3F173F00BF0D82 /* ToDoHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692AFA2A3F173F00BF0D82 /* ToDoHomeView.swift */; };
 		2D692AFE2A3F3FA100BF0D82 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692AFD2A3F3FA100BF0D82 /* MenuList.swift */; };
 		2D692AFF2A3F3FA100BF0D82 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692AFD2A3F3FA100BF0D82 /* MenuList.swift */; };
+		2D692B022A40325D00BF0D82 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692B012A40325D00BF0D82 /* Color+Extensions.swift */; };
+		2D692B032A40325D00BF0D82 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692B012A40325D00BF0D82 /* Color+Extensions.swift */; };
+		2D692B052A40448000BF0D82 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692B042A40448000BF0D82 /* MenuItemCell.swift */; };
+		2D692B062A40448000BF0D82 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D692B042A40448000BF0D82 /* MenuItemCell.swift */; };
+		2D692B092A40611C00BF0D82 /* BalooBhai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D692B082A40611C00BF0D82 /* BalooBhai-Regular.ttf */; };
+		2D692B0A2A40611C00BF0D82 /* BalooBhai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D692B082A40611C00BF0D82 /* BalooBhai-Regular.ttf */; };
+		2D692B0C2A40643F00BF0D82 /* olivers barney.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D692B0B2A40643F00BF0D82 /* olivers barney.otf */; };
+		2D692B0D2A40643F00BF0D82 /* olivers barney.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D692B0B2A40643F00BF0D82 /* olivers barney.otf */; };
 		2DBF29B429CC592500B24EA6 /* WidgetFactoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF29B329CC592500B24EA6 /* WidgetFactoryApp.swift */; };
 		2DBF29B629CC592500B24EA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF29B529CC592500B24EA6 /* ContentView.swift */; };
 		2DBF29B829CC592600B24EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF29B729CC592600B24EA6 /* Assets.xcassets */; };
@@ -81,6 +89,10 @@
 		2D43F6F429D185D400FBF86D /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		2D692AFA2A3F173F00BF0D82 /* ToDoHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoHomeView.swift; sourceTree = "<group>"; };
 		2D692AFD2A3F3FA100BF0D82 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		2D692B012A40325D00BF0D82 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		2D692B042A40448000BF0D82 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		2D692B082A40611C00BF0D82 /* BalooBhai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhai-Regular.ttf"; sourceTree = "<group>"; };
+		2D692B0B2A40643F00BF0D82 /* olivers barney.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "olivers barney.otf"; sourceTree = "<group>"; };
 		2DBF29B029CC592500B24EA6 /* WidgetFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBF29B329CC592500B24EA6 /* WidgetFactoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetFactoryApp.swift; sourceTree = "<group>"; };
 		2DBF29B529CC592500B24EA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +139,7 @@
 				2DBF29C329CC7AEA00B24EA6 /* SplashView.swift */,
 				2D43F6B229D0568300FBF86D /* TodoView.swift */,
 				2D692AFA2A3F173F00BF0D82 /* ToDoHomeView.swift */,
+				2D692B042A40448000BF0D82 /* MenuItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +178,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2D692B002A40317400BF0D82 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2D692B012A40325D00BF0D82 /* Color+Extensions.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2D692B072A4060CF00BF0D82 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2D692B0B2A40643F00BF0D82 /* olivers barney.otf */,
+				2D692B082A40611C00BF0D82 /* BalooBhai-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2DBF29A729CC592400B24EA6 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +217,8 @@
 		2DBF29B229CC592500B24EA6 /* WidgetFactory */ = {
 			isa = PBXGroup;
 			children = (
+				2D692B072A4060CF00BF0D82 /* Fonts */,
+				2D692B002A40317400BF0D82 /* Categories */,
 				2D43F6AF29D0563B00FBF86D /* View */,
 				2D43F6A629D021CB00FBF86D /* Model */,
 				2DBF29B329CC592500B24EA6 /* WidgetFactoryApp.swift */,
@@ -285,7 +317,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D692B0D2A40643F00BF0D82 /* olivers barney.otf in Resources */,
 				2D43F6C629D05BBD00FBF86D /* Assets.xcassets in Resources */,
+				2D692B0A2A40611C00BF0D82 /* BalooBhai-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +329,8 @@
 			files = (
 				2DBF29BB29CC592600B24EA6 /* Preview Assets.xcassets in Resources */,
 				2DBF29B829CC592600B24EA6 /* Assets.xcassets in Resources */,
+				2D692B0C2A40643F00BF0D82 /* olivers barney.otf in Resources */,
+				2D692B092A40611C00BF0D82 /* BalooBhai-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +344,7 @@
 				2D43F6F129D174D600FBF86D /* SimpleEntry.swift in Sources */,
 				2DBF8F5A29E1789B006A104E /* TodoList.swift in Sources */,
 				2DBF8F5829E1784B006A104E /* TodoItem.swift in Sources */,
+				2D692B062A40448000BF0D82 /* MenuItemCell.swift in Sources */,
 				2D692AFC2A3F173F00BF0D82 /* ToDoHomeView.swift in Sources */,
 				2D43F6D529D0B54C00FBF86D /* WidgetView.swift in Sources */,
 				2DBF8F5929E17880006A104E /* TodoService.swift in Sources */,
@@ -316,6 +353,7 @@
 				2D43F6C429D05BBD00FBF86D /* WidgetFactory_Widget.swift in Sources */,
 				2D43F6F329D1768900FBF86D /* Provider.swift in Sources */,
 				2D43F6C029D05BBD00FBF86D /* WidgetFactory_WidgetBundle.swift in Sources */,
+				2D692B032A40325D00BF0D82 /* Color+Extensions.swift in Sources */,
 				2D43F6DA29D0B86100FBF86D /* MediumSizeView.swift in Sources */,
 				2D43F6C229D05BBD00FBF86D /* WidgetFactory_WidgetLiveActivity.swift in Sources */,
 			);
@@ -327,9 +365,11 @@
 			files = (
 				2D43F6B329D0568300FBF86D /* TodoView.swift in Sources */,
 				2D43F6F529D185D400FBF86D /* TodoList.swift in Sources */,
+				2D692B052A40448000BF0D82 /* MenuItemCell.swift in Sources */,
 				2D43F6AC29D0223900FBF86D /* TodoItem.swift in Sources */,
 				2DBF29B629CC592500B24EA6 /* ContentView.swift in Sources */,
 				2DBF29B429CC592500B24EA6 /* WidgetFactoryApp.swift in Sources */,
+				2D692B022A40325D00BF0D82 /* Color+Extensions.swift in Sources */,
 				2D43F6AE29D022B600FBF86D /* TodoService.swift in Sources */,
 				2DBF29C429CC7AEA00B24EA6 /* SplashView.swift in Sources */,
 				2D692AFE2A3F3FA100BF0D82 /* MenuList.swift in Sources */,
@@ -533,6 +573,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,6 +604,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

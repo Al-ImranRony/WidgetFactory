@@ -19,7 +19,8 @@ struct ContentView: View {
                 SplashView()
             }
             else {
-                TodoView()
+//                TodoView()
+                ToDoHomeView()
             }
         }
         .padding()
