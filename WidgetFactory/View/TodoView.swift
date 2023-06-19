@@ -13,6 +13,8 @@ struct TodoView: View {
     @State var todos: [TodoItem] = []
     @State var selectedTodo: TodoItem?
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         NavigationView {
             List(todos) { todo in
@@ -24,6 +26,17 @@ struct TodoView: View {
                 .buttonStyle(.plain)
             }
             .navigationTitle("Todo Entities")
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                        Text("Back")
+                    }
+                    .tint(.mint)
+                }
+            })
             .task {
                 do {
                     todos = try await TodoService.shared.getAllTodos()
