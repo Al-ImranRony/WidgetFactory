@@ -16,9 +16,10 @@ struct MenuItemCell: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 20, height: 20, alignment: .leading)
-                .padding(.trailing)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                 .symbolRenderingMode(.hierarchical)
                 .foregroundStyle(Color(hex: menu.iconColor))
+                .setShadow()
             Text(menu.title)
             Spacer()
             Text(menu.numberOfItems > 0 ? "\(menu.numberOfItems)" : "")
@@ -29,6 +30,6 @@ struct MenuItemCell: View {
 
 struct MenuItemCell_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemCell(menu: Menu(title: "", icon: "", iconColor: "", numberOfItems: 0))
+        MenuItemCell(menu: Menu(title: "Menu Item", icon: "o.square", iconColor: "#3498DB", numberOfItems: 3))
     }
 }

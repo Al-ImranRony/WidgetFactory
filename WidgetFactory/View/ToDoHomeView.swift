@@ -13,6 +13,9 @@ struct ToDoHomeView: View {
     @State var menus: [Menu] = Menu.defaultMenus()
     @State var createdMenus: [Menu] = Menu.createdMenus()
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    
+    
     var body: some View {
         VStack {
             NavigationView {
@@ -37,14 +40,13 @@ struct ToDoHomeView: View {
                 .overlay(
                     BarContent()
                         .padding(.trailing, 30)
-                        .offset(x: 0, y: -60)
+                        .offset(x: 0, y: -62)
                     , alignment: .topTrailing)
                 .navigationTitle(Text("D A I L Y  D O"))
                 .listStyle(.grouped)
                 .offset(x: 0, y: 20)
                 .listRowInsets(EdgeInsets())
             }
-            Spacer()
             MenuItemCell(menu: Menu(title: "", icon: "plus", iconColor: "#3498DB", numberOfItems: 0))
                 .listRowSeparator(.hidden)
                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 0))
@@ -68,11 +70,37 @@ struct BarContent: View {
 //        }
         Image(systemName: "person.crop.circle.dashed")
             .resizable()
-            .scaledToFit()
-            .frame(width: 30, height: 30)
-            .tint(.mint)
+            .rightAlighnedContent()
+            .setShadow()
     }
 }
+
+extension View {
+    func rightAlighnedContent() -> some View {
+        modifier(RightAlighnedContent())
+    }
+    
+    func setShadow() -> some View {
+        modifier(SetShadow())
+    }
+}
+
+struct RightAlighnedContent: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .scaledToFit()
+            .frame(width: 30, height: 30)
+            .foregroundColor(Color.indigo)
+    }
+}
+
+struct SetShadow: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .shadow(color: .gray, radius: 5, x: 3, y: 3)
+    }
+}
+
 
 struct ToDoHomeView_Previews: PreviewProvider {
     static var previews: some View {
