@@ -34,7 +34,7 @@ struct ToDoHomeView: View {
                             MenuItemCell(menu: menu)
                         }
                         .listRowSeparator(.hidden)
-                        .padding(.bottom, 420)
+                        .padding(.bottom, UIScreen.main.bounds.height/2)
                     }
                 }
                 .overlay(
@@ -47,17 +47,21 @@ struct ToDoHomeView: View {
                 .offset(x: 0, y: 20)
                 .listRowInsets(EdgeInsets())
             }
-            MenuItemCell(menu: Menu(title: "", icon: "plus", iconColor: "#3498DB", numberOfItems: 0))
+            MenuItemCell(menu: Menu(title: "", icon: "plus", iconColor: "#330099", numberOfItems: 0))
                 .listRowSeparator(.hidden)
-                .padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 0))
-            Divider()
-                .frame(width: UIScreen.main.bounds.width)
-                .padding(.top, -10)
+                .listStyle(.grouped)
+                .padding(EdgeInsets(top: 10, leading: 18, bottom: 15, trailing: 0))
+            Rectangle()
+                .frame(height: 0)
+                .background(Color.indigo)
+                .edgesIgnoringSafeArea(.all)
+                .listStyle(.grouped)
         }
     }
     
     init() {
         UITableView.appearance().showsVerticalScrollIndicator = false
+        self.propotionalFrame(width: 0.5, height: 0.3)
     }
 }
 
@@ -82,6 +86,12 @@ extension View {
     
     func setShadow() -> some View {
         modifier(SetShadow())
+    }
+    
+    func propotionalFrame(width: CGFloat, height: CGFloat, isSquared: Bool = false, alignment: Alignment = .center) -> some View {
+        let finalWidth = UIScreen.main.bounds.width * width
+        let finalHeight = isSquared ? finalWidth : UIScreen.main.bounds.height * height
+        return frame(width: finalWidth, height: finalHeight)
     }
 }
 
